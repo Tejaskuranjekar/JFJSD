@@ -2,23 +2,25 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int balance = 5000;
-        int choice = 3;
+        int balance = 2000;
+        int choice = 2;
         boolean isRunning = true;
 
+
         while (isRunning) {
+            System.out.println("\n");
             System.out.println("--- ATM Menu ---");
             System.out.println("1. Check Balance");
             System.out.println("2. Deposit Money");
             System.out.println("3. Withdraw Money");
             System.out.println("4. Exit");
-            System.out.println("--------------------");
+            System.out.println("\n");
             System.out.println("Executing option: " + choice);
-            System.out.println("--------------------");
 
             switch (choice) {
                 case 1:
                     System.out.println("Current Balance: " + balance);
+                    isRunning = false;
                     break;
 
                 case 2:
@@ -26,6 +28,7 @@ public class Main {
                     System.out.println("Depositing: " + depositAmount);
                     balance += depositAmount;
                     System.out.println("New Balance: " + balance);
+                    isRunning = false;
                     break;
 
                 case 3:
@@ -38,6 +41,7 @@ public class Main {
                     } else {
                         System.out.println("Insufficient Balance.");
                     }
+                    isRunning = false;
                     break;
 
                 case 4:
